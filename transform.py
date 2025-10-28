@@ -41,5 +41,22 @@ def run_llm_demo():
         print("\n Prompt:",prompt)
         print("\n Generated:", generate_text(generator,prompt)) 
         input("\nPress Enter to see next example...")
+        
+        
+        
+def interactive_demo():
+    """
+    Allows users to interact with the model
+    """
+    generator = create_simple_llm() 
+    print("\n🤖 Interactive LLM Demo")
+    print("Type your prompts (or 'quit' to exit)")    
+    while True:
+        prompt = input("\n Enter your prompt: ")
+        if prompt.lower() == "quit":
+            break
+        response = generate_text(generator, prompt) 
+        print("\n💭 Generated response:")
+        print(response)
 
 
